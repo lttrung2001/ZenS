@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">zens</string>
+    <string name="footer_string">This appis created as part of Hlsolutions program. The materials contained on this website are provided for general information only and do not constitute any form of advice. HLS assumes no responsibility for the accuracy of any particular statement and accepts no liability for any lost dor damage which may arise from reliance on the information contained on this site.</string>
+    <string name="footer_copyright">Copyright 2021 HLS</string>
+</resources>
