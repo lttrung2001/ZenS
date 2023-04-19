@@ -30,7 +30,8 @@
                     android:src="@drawable/logo_company"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/company_image" />
 
                 <ImageView
                     android:id="@+id/image_flower"
@@ -39,13 +40,14 @@
                     android:src="@drawable/img_flower"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/flower_image" />
 
                 <TextView
                     android:id="@+id/by"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Handicrafted by"
+                    android:text="@string/handicrafted_by"
                     app:layout_constraintBottom_toTopOf="@+id/person_name"
                     app:layout_constraintEnd_toStartOf="@id/image_flower"
                     app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +57,7 @@
                     android:id="@+id/person_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jim HLS"
+                    android:text="@string/jim_hls"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/by"
@@ -78,7 +80,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A joke a day keeps the doctor away"
+            android:text="@string/a_joke_a_day_keeps_the_doctor_away"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -87,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="If you joke wrong way, your teeth have to pay. (Serious)"
+            android:text="@string/if_you_joke_wrong_way_your_teeth_have_to_pay_serious"
             android:textAlignment="center"
             android:textColor="@color/white" />
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -129,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/funny_button_color"
-            android:text="This is Funny!"
+            android:text="@string/this_is_funny"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_not_funny"
@@ -141,7 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/no_funny_button_color"
-            android:text="This is not funny."
+            android:text="@string/this_is_not_funny"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

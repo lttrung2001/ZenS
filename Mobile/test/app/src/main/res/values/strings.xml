@@ -2,4 +2,12 @@
     <string name="app_name">zens</string>
     <string name="footer_string">This appis created as part of Hlsolutions program. The materials contained on this website are provided for general information only and do not constitute any form of advice. HLS assumes no responsibility for the accuracy of any particular statement and accepts no liability for any lost dor damage which may arise from reliance on the information contained on this site.</string>
     <string name="footer_copyright">Copyright 2021 HLS</string>
+    <string name="handicrafted_by">Handicrafted by</string>
+    <string name="jim_hls">Jim HLS</string>
+    <string name="a_joke_a_day_keeps_the_doctor_away">A joke a day keeps the doctor away</string>
+    <string name="if_you_joke_wrong_way_your_teeth_have_to_pay_serious">If you joke wrong way, your teeth have to pay. (Serious)</string>
+    <string name="this_is_funny">This is Funny!</string>
+    <string name="this_is_not_funny">This is not funny.</string>
+    <string name="company_image">Company image</string>
+    <string name="flower_image">Flower image</string>
 </resources>
