@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#7C1111"
+    android:backgroundTintMode="screen"
     tools:context=".ui.showjoke.ViewJokeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -27,21 +29,22 @@
                     android:id="@+id/image_company"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:contentDescription="@string/company_image"
                     android:src="@drawable/logo_company"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/company_image" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/image_flower"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/flower_image"
                     android:src="@drawable/img_flower"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/flower_image" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/by"
@@ -72,7 +75,8 @@
         android:layout_height="wrap_content"
         android:background="@color/green"
         android:orientation="vertical"
-        android:padding="32dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar_layout">
@@ -88,10 +92,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="@string/if_you_joke_wrong_way_your_teeth_have_to_pay_serious"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="13sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.core.widget.NestedScrollView
@@ -106,7 +111,8 @@
         <TextView
             android:id="@+id/joke_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
     </androidx.core.widget.NestedScrollView>
 
     <TextView
@@ -124,31 +130,49 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/footer">
 
-        <Button
-            android:id="@+id/button_funny"
+        <FrameLayout
+            android:id="@+id/button_funny_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/funny_button_color"
-            android:text="@string/this_is_funny"
-            android:textAllCaps="false"
+            android:background="@color/funny_button_color"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_not_funny"
+            app:layout_constraintEnd_toStartOf="@+id/button_not_funny_container"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button_not_funny"
+            <Button
+                android:id="@+id/button_funny"
+                android:layout_width="wrap_content"
+                android:layout_height="38sp"
+                android:background="@drawable/bg_button_transparent_no_corner_radius"
+                android:text="@string/this_is_funny"
+                android:textAllCaps="false" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/button_not_funny_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/no_funny_button_color"
-            android:text="@string/this_is_not_funny"
-            android:textAllCaps="false"
+            android:background="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button_funny"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@id/button_funny_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/button_not_funny"
+                android:layout_width="wrap_content"
+                android:layout_height="38sp"
+                android:background="@drawable/bg_button_transparent_no_corner_radius"
+                android:text="@string/this_is_not_funny"
+                android:textAllCaps="false" />
+        </FrameLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -165,12 +189,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/footer_string"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
+            android:layout_marginVertical="10dp"
             android:text="@string/footer_copyright"
             android:textAlignment="center"
             android:textColor="@color/black" />
