@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class Joke(
     @PrimaryKey val id: Int,
     val content: String,
-    val isFunny: Boolean
+    val isFunny: Boolean? = null
 ) : java.io.Serializable

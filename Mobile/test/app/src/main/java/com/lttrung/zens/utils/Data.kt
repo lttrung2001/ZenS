@@ -4,10 +4,10 @@ import com.lttrung.zens.domain.locals.room.entities.Joke
 
 object Data {
     val data = mutableListOf<Joke>().also {
-        it.add(Joke(1, firstJoke, false))
-        it.add(Joke(2, secondJoke, false))
-        it.add(Joke(3, thirdJoke, false))
-        it.add(Joke(4, fouthJoke, false))
+        it.add(Joke(1, firstJoke))
+        it.add(Joke(2, secondJoke))
+        it.add(Joke(3, thirdJoke))
+        it.add(Joke(4, fouthJoke))
         return@also
     }
     private const val firstJoke =

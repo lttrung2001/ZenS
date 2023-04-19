@@ -23,7 +23,7 @@ interface JokeDao {
 //    @Query("SELECT * FROM Joke WHERE id = :jokeId")
 //    fun get(jokeId: Int): Joke
 
-    @Query("SELECT * FROM Joke WHERE isFunny = 0 LIMIT 1")
+    @Query("SELECT * FROM Joke WHERE isFunny is null LIMIT 1")
     fun get(): Single<Joke>
 
     @Query("SELECT * FROM Joke")
