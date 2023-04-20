@@ -27,6 +27,7 @@ class RoundedImageView @JvmOverloads constructor(
     }
 
     // override onDraw method
+
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas) {
         // get the dimensions of the view

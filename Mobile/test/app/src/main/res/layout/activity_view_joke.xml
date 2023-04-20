@@ -37,14 +37,14 @@
 
                 <ImageView
                     android:id="@+id/image_flower"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="0dp"
                     android:layout_marginEnd="16dp"
                     android:contentDescription="@string/flower_image"
                     android:src="@drawable/img_flower"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/person_name"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="@id/by" />
 
                 <TextView
                     android:id="@+id/by"
@@ -133,47 +133,43 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/footer">
 
-        <FrameLayout
-            android:id="@+id/button_funny_container"
+        <com.lttrung.zens.customviews.NonRoundedButton
+            android:id="@+id/button_funny"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/funny_button_color"
+            android:text="@string/this_is_funny"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_not_funny_container"
+            app:layout_constraintEnd_toStartOf="@+id/button_not_funny"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:solidColor="@color/funny_button_color" />
 
-            <Button
-                android:id="@+id/button_funny"
-                android:layout_width="wrap_content"
-                android:layout_height="38sp"
-                android:background="@drawable/bg_button_transparent_no_corner_radius"
-                android:text="@string/this_is_funny"
-                android:textAllCaps="false" />
-        </FrameLayout>
-
-
-        <FrameLayout
-            android:id="@+id/button_not_funny_container"
+        <com.lttrung.zens.customviews.NonRoundedButton
+            android:id="@+id/button_not_funny"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/green"
+            android:text="@string/this_is_not_funny"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button_funny_container"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/button_not_funny"
-                android:layout_width="wrap_content"
-                android:layout_height="38sp"
-                android:background="@drawable/bg_button_transparent_no_corner_radius"
-                android:text="@string/this_is_not_funny"
-                android:textAllCaps="false" />
-        </FrameLayout>
+            app:layout_constraintStart_toEndOf="@+id/button_funny"
+            app:layout_constraintTop_toTopOf="parent"
+            app:solidColor="@color/no_funny_button_color" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/footer"
